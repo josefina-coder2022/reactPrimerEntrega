@@ -4,37 +4,40 @@ import Footer from "./components/Footer/Footer";
 import CartWidget from "./components/Header/CartWidget";
 import NavBar from "./components/Header/NavBar";
 import ItemListContainer from "./components/Main/ItemListContainer";
-
+import { getProductos } from "./utils";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DetalleProducto from "./pages/DetalleProducto";
+import Container from "./components/Container";
+import MostrarProducto from "./pages/MostrarProducto";
 
 
 const App = () => {
   return (
-    <div>
-      
-      <header className="header">
-        
-        <NavBar />
 
+    <BrowserRouter>
+
+      <header className="header">
+        <NavBar />
       </header>
 
       <main className="main">
-        
-        <ItemListContainer
-          greeting="Bienvenidos a..."
-          nombre="Nutevia"
-          beneficios = "Lorem Ipsum es simplemente un texto de relleno de la industria de la impresión y la tipografía. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el siglo XVI, cuando un impresor desconocido tomó una galería de tipos y los mezcló para hacer un libro de muestras tipográficas. Ha sobrevivido no sólo a cinco siglos, sino también al salto hacia la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. "
-        />
-
+        <Routes>
+          <Route path="/" element={<MostrarProducto />} />
+          <Route path="/home/:categoria" element={<MostrarProducto />} />
+          <Route path="/womenClothing/:categoria" element={<MostrarProducto />} />
+          <Route path="/menClothing/:categoria" element={<MostrarProducto />} />
+          <Route path="/jewelery/:categoria" element={<MostrarProducto/>} />
+          <Route path="detalle/:id" element={<DetalleProducto />} />
+          <Route path="*" element={<p>404 vuelva a intentar por favor</p>} />
+        </Routes>
       </main>
 
       <footer className="footer">
-        
         <Footer />
-
       </footer>
 
-    </div>
-    
+    </BrowserRouter>
+
   );
 }
 

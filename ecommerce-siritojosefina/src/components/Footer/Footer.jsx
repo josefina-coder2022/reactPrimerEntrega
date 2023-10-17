@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../imagenes/logoNutevia2.jpg'
+import Logo from '../../imagenes/logo-ecommerce2.jpg'
 
 function Footer() {
   return (
@@ -20,9 +20,9 @@ function Footer() {
 
 
         <div className="iconFooter">
-            <i class="bi bi-facebook" > </i>
-            <i class="bi bi-instagram"> </i>
-            <i class="bi bi-whatsapp"></i> 
+            <i className="bi bi-facebook" > </i>
+            <i className="bi bi-instagram"> </i>
+            <i className="bi bi-whatsapp"></i> 
           </div>
     </section>
     

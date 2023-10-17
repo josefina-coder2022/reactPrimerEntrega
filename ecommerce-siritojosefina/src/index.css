@@ -14,7 +14,7 @@ body,
 body {
   margin-right: auto;
   margin-left: auto;
-  background-color: rgb(161, 248, 205);
+  background-color: rgb(195, 250, 223);
  
 }
 
@@ -41,16 +41,33 @@ li{
 .iconNavBar i {
   font-size: 30px;
   padding: 10px;
+  text-align: center;
+
 }
 
-h1,h2{
+h1,
+h2 {
   font-size: xx-large;
   font-weight: 400;
   line-height: 1.5rem;
-  color: white;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.card-image{
+  width: 120px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title{
+  font-size: small;
+}
+
+.card{
+  border-radius: 30px;
 }
 
 main{
@@ -60,7 +77,7 @@ main{
 .conteinerItemList{
   width: 90%;
   padding: 10px;
-  background: rgb(176, 251, 64);
+  background: rgb(120, 161, 243);
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 40px;
